@@ -114,3 +114,10 @@ h2 {
       transform: rotate(360deg);
     }
   }
+
+@media screen and (max-width: 768px) {
+    .footer img {
+        content: url('okadh2.jpeg');
+    }
+}
+
