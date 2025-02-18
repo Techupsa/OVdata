@@ -17,29 +17,13 @@
       <div class="form-box">
         <h2>سجل بياناتك وخلك جاهز!</h2>
         <form id="dataForm">
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="الاسم"
-            required
-          />
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="رقم الجوال"
-            required
-          />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="البريد الإلكتروني"
-            required
-          />
+          <input type="text" id="name" name="name" placeholder="الاسم" required />
+          <input type="tel" id="phone" name="phone" placeholder="رقم الجوال" required />
+          <input type="email" id="email" name="email" placeholder="البريد الإلكتروني" required />
+          
           <button type="submit" class="next-button">
-            <img src="arrow.png" alt="Next" />
+            <img src="arrow.png" alt="Next" id="arrow-icon" />
+            <div class="loading-spinner" id="loading-spinner"></div>
           </button>
         </form>
       </div>
@@ -50,34 +34,41 @@
     </div>
 
     <script>
-      document
-        .getElementById("dataForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
+      document.getElementById("dataForm").addEventListener("submit", function (e) {
+        e.preventDefault();
 
-          const name = document.getElementById("name").value;
-          const phone = document.getElementById("phone").value;
-          const email = document.getElementById("email").value;
+        const name = document.getElementById("name").value;
+        const phone = document.getElementById("phone").value;
+        const email = document.getElementById("email").value;
+        const button = document.querySelector(".next-button");
+        const arrowIcon = document.getElementById("arrow-icon");
+        const spinner = document.getElementById("loading-spinner");
 
-          fetch(
-            "https://script.google.com/macros/s/AKfycbxnhSe61qBXUMMY3i_732OxkFyLaZTAoiSKu2J6e9hS8O7zSWgyEPkEANNUh5HpWX4hmg/exec",
-            {
-              method: "POST",
-              mode: "no-cors",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({ name, phone, email }),
-            }
-          )
-            .then((response) => {
-              // Upon successful submission, redirect to "page2.html"
-              window.location.href = "Page2.html";
-            })
-            .catch((error) => {
-              console.error("Error submitting data:", error);
-            });
-        });
+        arrowIcon.style.display = "none";
+        spinner.style.display = "block";
+        button.disabled = true;
+
+        fetch(
+          "https://script.google.com/macros/s/AKfycbxnhSe61qBXUMMY3i_732OxkFyLaZTAoiSKu2J6e9hS8O7zSWgyEPkEANNUh5HpWX4hmg/exec",
+          {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ name, phone, email }),
+          }
+        )
+          .then(() => {
+            window.location.href = "Page2.html"; 
+          })
+          .catch((error) => {
+            console.error("Error submitting data:", error);
+            arrowIcon.style.display = "block";
+            spinner.style.display = "none";
+            button.disabled = false;
+          });
+      });
     </script>
   </body>
 </html>
