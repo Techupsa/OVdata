@@ -45,7 +45,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 150vh;
-    padding-bottom: 15%;
 }
 
 .form-box {
@@ -115,10 +114,4 @@ h2 {
       transform: rotate(360deg);
     }
   }
-
-@media screen and (max-width: 768px) {
-    .footer img {
-        content: url('okadh2.jpeg');
-    }
-}
 
