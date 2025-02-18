@@ -45,6 +45,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 150vh;
+    padding-bottom: 10px;
 }
 
 .form-box {
