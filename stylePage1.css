@@ -84,10 +84,10 @@ h2 {
 }
 
 .footer {
-    position: absolute;
+/*     position: absolute;
     bottom: 0;
     width: 100%;
-    text-align: center;
+    text-align: center; */
 }
 
 .footer img {
