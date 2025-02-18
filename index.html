@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>عكاظ فالي</title>
+    <link rel="stylesheet" href="stylePage1.css" />
+  </head>
+  <body>
+    <div class="header-bg"></div>
+    <div class="logos">
+      <img src="Logos/dour_logo.png" alt="Logo 1" class="logo1" />
+      <img src="Logos/techup_logo.png" alt="Logo 2" class="logo2" />
+    </div>
+
+    <div class="container">
+      <div class="form-box">
+        <h2>سجل بياناتك وخلك جاهز!</h2>
+        <form id="dataForm">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="الاسم"
+            required
+          />
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="رقم الجوال"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="البريد الإلكتروني"
+            required
+          />
+          <button type="submit" class="next-button">
+            <img src="logos/arrow.png" alt="Next" />
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer">
+      <img src="Logos/okadh2.jpeg" alt="okadhv" />
+    </div>
+
+    <script>
+      document
+        .getElementById("dataForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const name = document.getElementById("name").value;
+          const phone = document.getElementById("phone").value;
+          const email = document.getElementById("email").value;
+
+          fetch(
+            "https://script.google.com/macros/s/AKfycbxnhSe61qBXUMMY3i_732OxkFyLaZTAoiSKu2J6e9hS8O7zSWgyEPkEANNUh5HpWX4hmg/exec",
+            {
+              method: "POST",
+              mode: "no-cors",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ name, phone, email }),
+            }
+          )
+            .then((response) => {
+              // Upon successful submission, redirect to "page2.html"
+              window.location.href = "Page2.html";
+            })
+            .catch((error) => {
+              console.error("Error submitting data:", error);
+            });
+        });
+    </script>
+  </body>
+</html>
