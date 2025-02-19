@@ -29,6 +29,7 @@ body {
     right: 10px;
     display: flex;
     align-items: center;
+    gap:5px;
 }
 
 .logo1 {
