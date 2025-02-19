@@ -29,7 +29,6 @@ body {
     right: 10px;
     display: flex;
     align-items: center;
-    gap:5px;
 }
 
 .logo1 {
@@ -37,7 +36,7 @@ body {
 }
 
 .logo2 {
-    height: 70px;
+    height: 80px;
 }
 
 .container {
