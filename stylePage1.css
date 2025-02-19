@@ -41,6 +41,16 @@ body {
     margin-right:-5px;
 }
 
+.logo-ov {
+    position: absolute;
+    top: 15px;
+    left: 8px;
+}
+
+.logo3 {
+    height: 40px;
+}
+
 .container {
     display: flex;
     justify-content: center;
