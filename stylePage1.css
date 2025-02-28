@@ -143,10 +143,3 @@ h2 {
     }
 }
 
-@media (max-width: 768px) {
-    .logo-above-footer {
-        bottom: 500px;
-    }
-    
-}
-
