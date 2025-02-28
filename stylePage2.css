@@ -52,11 +52,13 @@ body {
 }
 
 .container {
+    min-height: 60vh; /* أو أي ارتفاع يناسبك */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150vh;
+    margin-top: 50px; /* بدلاً من `transform` */
 }
+
 
 .form-box {
     background: #e3edf3;
@@ -64,10 +66,10 @@ body {
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: 350px; 
-    position: relative; 
-    transform: translateY(-130px); 
-    text-align: center; 
+    position: relative;
+    margin-top: -50px; 
 }
+
 
 .checkmark {
     width: 50px; 
@@ -85,9 +87,23 @@ h2 {
     color: #515151;
 }
 
+.logo-above-footer {
+    position: relative;
+    bottom: 75px;
+    margin-top: 10px;
+}
+  
+.footer-logo {
+    width: 150px; 
+    max-width: 100%; 
+    display: block;
+    margin: 0 auto; 
+}
+  
+
 .footer {
     position: absolute;
-    bottom: 0;
+    bottom: -70px; /* تعديل هذه القيمة لزيادة المسافة من الأسفل */
     width: 100%;
     text-align: center;
 }
