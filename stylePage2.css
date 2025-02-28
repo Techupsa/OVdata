@@ -93,8 +93,8 @@ h2 {
     z-index: 9999; 
     margin-top: 10px; 
     bottom: 75px;
-}
-  
+}  
+
 .footer-logo {
     width: 150px; 
     max-width: 100%; 
@@ -102,7 +102,6 @@ h2 {
     margin: 0 auto; 
 }
   
-
 .footer {
     position: absolute;
     bottom: -70px; 
