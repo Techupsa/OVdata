@@ -114,6 +114,20 @@ h2 {
     max-height: 200px;
 }
 
+@media (max-width: 768px) {
+    .footer {
+        bottom: -150px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .footer {
+        bottom: -150px; 
+    }
+
+}
+
 
 
 
