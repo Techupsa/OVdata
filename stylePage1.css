@@ -112,7 +112,7 @@ h2 {
   
 .footer {
     position: absolute;
-    bottom: -100px; 
+    bottom: -70px; 
     width: 100%;
     text-align: center;
 }
@@ -141,5 +141,20 @@ h2 {
     100% {
       transform: rotate(360deg);
     }
+}
+
+
+@media (max-width: 768px) {
+    .footer {
+        bottom: -150px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .footer {
+        bottom: -150px; 
+    }
+
 }
 
