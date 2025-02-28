@@ -112,7 +112,7 @@ h2 {
 
 .footer {
     position: absolute;
-    bottom: -70px; /* تعديل هذه القيمة لزيادة المسافة من الأسفل */
+    bottom: -70px; 
     width: 100%;
     text-align: center;
 }
