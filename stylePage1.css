@@ -17,7 +17,7 @@ body {
 .header-bg {
     width: 100%;
     height: 40vh;
-    background: linear-gradient(to bottom, #bdd1de, #bdd1de, #ffffff);
+    background: linear-gradient(to bottom, #bdd1de,#bdd1de,#bdd1de,#bdd1de, white);
     position: relative;
     z-index: 0;
 }
