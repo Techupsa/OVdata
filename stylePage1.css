@@ -134,18 +134,18 @@ h2 {
     animation: spin 1s linear infinite;
   }
 
-  @keyframes spin {
+@keyframes spin {
     0% {
       transform: rotate(0deg);
     }
     100% {
       transform: rotate(360deg);
     }
-  }
+}
 
 @media (max-width: 768px) {
     .logo-above-footer {
-        bottom: 100px;
+        bottom: 500px;
     }
     
 }
