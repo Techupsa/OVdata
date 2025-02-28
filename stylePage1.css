@@ -57,7 +57,6 @@ body {
     align-items: center;
     min-height: 60vh; 
     margin-bottom: 30px;
-    
 }
 
 .form-box {
@@ -100,10 +99,10 @@ h2 {
 
 .logo-above-footer {
     position: relative;
+    z-index: 9999; 
+    margin-top: 10px; 
     bottom: 75px;
-    margin-top: 10px;
-}
-  
+}  
 .footer-logo {
     width: 150px; 
     max-width: 100%; 
